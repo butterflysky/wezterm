@@ -1,0 +1,17 @@
+[book]
+title = "Wez's Terminal Emulator"
+author = "Wez Furlong"
+src = "."
+
+[build]
+build-dir = "../gh_pages"
+create-missing = false
+
+[output.html]
+additional-css = ["custom.css"]
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
+git-repository-url = "https://github.com/wez/wezterm"
+
+[output.linkcheck]
+traverse-parent-directories = false
