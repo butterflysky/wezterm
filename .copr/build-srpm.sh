@@ -2,6 +2,8 @@
 set -e
 set -x
 
+which dnf && dnf -y install git curl || yum -y install git curl
+
 SPEC=$1
 OUTDIR=$2
 
@@ -24,9 +26,9 @@ mkdir -p $TOPDIR/{BUILDROOT,SOURCES}
 cp -r $REPO_ROOT $TMPDIR/scratch
 cd $TMPDIR/scratch
 
-echo installing build deps
-#which dnf && dnf -y install git curl || yum -y install git curl
+echo updating submodules
 git submodule update --init --recursive
+echo installing build deps
 ./get-deps
 
 echo installing rustup
