@@ -14,7 +14,7 @@ TOPDIR=$TMPDIR/_topdir
 BUILDROOT=$TOPDIR/BUILDROOT
 
 # wezterm version for rpm
-TAG_NAME=${TAG_NAME:-$(git describe --tags)}
+TAG_NAME=${TAG_NAME:-$(git describe --tags || true)}
 TAG_NAME=${TAG_NAME:-$(date +'%Y%m%d-%H%M%S')-$(git log --format=%h -1)}
 WEZTERM_RPM_VERSION=$(echo $TAG_NAME | sed -e 's/-/_/g')
 
