@@ -25,11 +25,12 @@ cp -r $REPO_ROOT $TMPDIR/scratch
 cd $TMPDIR/scratch
 
 echo installing build deps
-which dnf && dnf -y install git curl || yum -y install git curl
+#which dnf && dnf -y install git curl || yum -y install git curl
+git submodule update --init --recursive
 ./get-deps
 
 echo installing rustup
-curl https://sh.rustup.rs/ | bash -s -- -y --default-toolchain stable --profile minimal -c rustfmt
+curl https://sh.rustup.rs/ -sSf | bash -s -- -y --default-toolchain stable --profile minimal -c rustfmt
 
 echo building wezterm
 ~/.cargo/bin/cargo build --release
