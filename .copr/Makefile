@@ -3,4 +3,4 @@ outdir ?= rpmbuild/SRPMS
 .PHONY: srpm
 
 srpm:
-	./build-srpm.sh $(outdir)
+	./build-srpm.sh ./wezterm.spec $(outdir)
