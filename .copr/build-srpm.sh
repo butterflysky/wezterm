@@ -47,7 +47,7 @@ install -Dm644 assets/icon/terminal.png               $BUILDROOT/usr/share/icons
 install -Dm644 assets/wezterm.desktop                 $BUILDROOT/usr/share/applications/org.wezfurlong.wezterm.desktop
 install -Dm644 assets/wezterm.appdata.xml             $BUILDROOT/usr/share/metainfo/org.wezfurlong.wezterm.appdata.xml
 
-cd $(BUILDROOT) ; tar cvf $TOPDIR/SOURCES/wezterm.tar .
+cd $BUILDROOT ; tar cvf $TOPDIR/SOURCES/wezterm.tar .
 
 echo building source rpm
 rpmbuild \
