@@ -175,12 +175,12 @@ mouse button click, which is combined with a set of modifier keys to produce
 an action.</p>
 <p>A full list of possible keys, mouse events and actions are included below,
 after these tables describing the default assignments.</p>
-<h2><a class="header" href="#alt--option-key-behavior--composed-keys" id="alt--option-key-behavior--composed-keys">Alt / Option Key Behavior &amp; Composed Keys</a></h2>
+<h2 id="alt--option-key-behavior--composed-keys"><a class="header" href="#alt--option-key-behavior--composed-keys">Alt / Option Key Behavior &amp; Composed Keys</a></h2>
 <p>The operating system has its own user selectable keymap that is sometimes at
 odds with old-school terminal emulation that pre-dates internationalization as
 a concept.  WezTerm tries to behave reasonably by default, but also give you
 control in other situations.</p>
-<h3><a class="header" href="#layouts-with-an-altgr-key" id="layouts-with-an-altgr-key">Layouts with an AltGr key</a></h3>
+<h3 id="layouts-with-an-altgr-key"><a class="header" href="#layouts-with-an-altgr-key">Layouts with an AltGr key</a></h3>
 <p>If you have, for example, a European keyboard layout with an AltGr key then
 wezterm will respect the composition effects of AltGr produced by the system.
 For example, in a German keymap, <code>AltGr &lt;</code> will produce <code>|</code>.</p>
@@ -188,7 +188,7 @@ For example, in a German keymap, <code>AltGr &lt;</code> will produce <code>|</c
 keyboard with DEU selected in the OS), then the right hand <code>Alt</code> key is often
 re-interpreted as having the <code>AltGr</code> function with behavior as described above.</p>
 <p>The left <code>Alt</code> will be treated as a modifier with no composition effects.</p>
-<h3><a class="header" href="#macos-left-and-right-option-key" id="macos-left-and-right-option-key">macOS Left and Right Option Key</a></h3>
+<h3 id="macos-left-and-right-option-key"><a class="header" href="#macos-left-and-right-option-key">macOS Left and Right Option Key</a></h3>
 <p><em>since: 20200620-160318-e00b076c</em></p>
 <p>The default behavior is to treat the left <code>Option</code> key as the <code>Alt</code> modifier
 with no composition effects, while the right <code>Option</code> key performs composition
@@ -211,7 +211,7 @@ keys are treated as composition effects, so with the default settings of
 before generating an event; <code>Right-Opt n SPACE</code> will emit <code>~</code> whereas <code>Right-Opt n n</code> will emit <code>ñ</code>.</p>
 <p>You may also set <code>use_dead_keys = false</code> to skip the hold state; continuing
 the example above, <code>Right-Opt n</code> will then immediately produce <code>~</code>.</p>
-<h3><a class="header" href="#macos-and-the-input-method-editor-ime" id="macos-and-the-input-method-editor-ime">macOS and the Input Method Editor (IME)</a></h3>
+<h3 id="macos-and-the-input-method-editor-ime"><a class="header" href="#macos-and-the-input-method-editor-ime">macOS and the Input Method Editor (IME)</a></h3>
 <p>WezTerm has support for using the operating system Input Method Editor (IME) on
 macOS.  This is useful in cases where you need to type kanji or are using a
 keyboard layout with dead keys.  However, the input method editor can get in
@@ -224,7 +224,7 @@ repeat for a subset of keys.</p>
 </code></pre>
 <p><em>since: 20200620-160318-e00b076c</em></p>
 <p>The default for <code>use_ime</code> is false.  The default in earlier releases was <code>true</code>.</p>
-<h3><a class="header" href="#microsoft-windows-and-dead-keys" id="microsoft-windows-and-dead-keys">Microsoft Windows and Dead Keys</a></h3>
+<h3 id="microsoft-windows-and-dead-keys"><a class="header" href="#microsoft-windows-and-dead-keys">Microsoft Windows and Dead Keys</a></h3>
 <p><em>since: 20201031-154415-9614e117</em></p>
 <p>By default, if you are using a layout with <em>dead keys</em> (eg: US International
 layout, or a number of European layouts such as German or French) pressing
@@ -240,12 +240,12 @@ file:</p>
   use_dead_keys = false
 }
 </code></pre>
-<h3><a class="header" href="#defining-assignments-for-key-combinations-that-may-be-composed" id="defining-assignments-for-key-combinations-that-may-be-composed">Defining Assignments for key combinations that may be composed</a></h3>
+<h3 id="defining-assignments-for-key-combinations-that-may-be-composed"><a class="header" href="#defining-assignments-for-key-combinations-that-may-be-composed">Defining Assignments for key combinations that may be composed</a></h3>
 <p>When a key combination produces a composed key result, wezterm will look up
 both the composed and uncomposed versions of the keypress in your key mappings.
 If either lookup matches your assignment, that will take precedence over
 the normal key processing.</p>
-<h2><a class="header" href="#default-shortcut--key-binding-assignments" id="default-shortcut--key-binding-assignments">Default Shortcut / Key Binding Assignments</a></h2>
+<h2 id="default-shortcut--key-binding-assignments"><a class="header" href="#default-shortcut--key-binding-assignments">Default Shortcut / Key Binding Assignments</a></h2>
 <p>The default key bindings are:</p>
 <table><thead><tr><th>Modifiers</th><th>Key</th><th>Action</th></tr></thead><tbody>
 <tr><td><code>SUPER</code></td><td><code>c</code></td><td><code>CopyTo=&quot;Clipboard&quot;</code></td></tr>
@@ -321,7 +321,7 @@ you must explicitly register every binding.</p>
   disable_default_key_bindings = true,
 }
 </code></pre>
-<h2><a class="header" href="#default-mouse-assignments" id="default-mouse-assignments">Default Mouse Assignments</a></h2>
+<h2 id="default-mouse-assignments"><a class="header" href="#default-mouse-assignments">Default Mouse Assignments</a></h2>
 <p>In the table below, <code>Triple Left Down</code> means that the left mouse button is
 being triple clicked and that the event matches the downstroke of the third
 quick consecutive press.  <code>Triple Left Up</code> matches the subsequent release event
@@ -348,7 +348,7 @@ you must explicitly register every binding.</p>
   disable_default_mouse_bindings = true,
 }
 </code></pre>
-<h2><a class="header" href="#configuring-mouse-assignments" id="configuring-mouse-assignments">Configuring Mouse Assignments</a></h2>
+<h2 id="configuring-mouse-assignments"><a class="header" href="#configuring-mouse-assignments">Configuring Mouse Assignments</a></h2>
 <p><em>since: 20200607-144723-74889cd4</em></p>
 <p>You can define mouse actions using the <code>mouse_bindings</code> configuration section:</p>
 <pre><code class="language-lua">local wezterm = require 'wezterm';
@@ -400,7 +400,7 @@ you wanted quadruple-click bindings you can specify <code>streak=4</code>.</p>
 <tr><td>Double Left Up</td><td><code>event={Up={streak=2, button=&quot;Left&quot;}}</code></td></tr>
 <tr><td>Single Left Drag</td><td><code>event={Drag={streak=1, button=&quot;Left&quot;}}</code></td></tr>
 </tbody></table>
-<h2><a class="header" href="#configuring-key-assignments" id="configuring-key-assignments">Configuring Key Assignments</a></h2>
+<h2 id="configuring-key-assignments"><a class="header" href="#configuring-key-assignments">Configuring Key Assignments</a></h2>
 <p>These can be overridden using the <code>keys</code> section in your <code>~/.wezterm.lua</code> config file.
 For example, you can disable a default assignment like this:</p>
 <pre><code class="language-lua">local wezterm = require 'wezterm';
@@ -441,7 +441,7 @@ key.  Left and right are equivalent.</li>
 on other systems the <code>Alt</code> or <code>Meta</code> key.  Left and right are equivalent.</li>
 </ul>
 <p>You can combine modifiers using the <code>|</code> symbol (eg: <code>&quot;CMD|CTRL&quot;</code>).</p>
-<h3><a class="header" href="#leader-key" id="leader-key">Leader Key</a></h3>
+<h3 id="leader-key"><a class="header" href="#leader-key">Leader Key</a></h3>
 <p><em>Since: 20201031-154415-9614e117</em></p>
 <p>A <em>leader</em> key is a a modal modifier key.  If leader is specified in the
 configuration then pressing that key combination will enable a virtual <code>LEADER</code>
@@ -469,7 +469,7 @@ return {
   }
 }
 </code></pre>
-<h1><a class="header" href="#available-actions" id="available-actions">Available Actions</a></h1>
+<h1 id="available-actions"><a class="header" href="#available-actions">Available Actions</a></h1>
 <p>See the <a href="lua/keyassignment/index.html"><code>KeyAssignment</code> reference</a> for information
 on available actions.</p>
 
